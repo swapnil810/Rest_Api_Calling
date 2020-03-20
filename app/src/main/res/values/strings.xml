@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Api</string>
+    <string name="default_notification_channel_id" translatable="false">my_channel_02</string>
+    <string name="loading" translatable="false">Loading...</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="please_sing_in_to_continue" translatable="false">Please sign in to continue.</string>
+    <string name="please_sing_up_to_continue" translatable="false">Please sign up to continue.</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="forgot_password" translatable="false">Forgot password?</string>
+    <string name="log_in" translatable="false">log in</string>
+    <string name="already_have_an_account_signup" translatable="false">Already have an account? <font fgcolor='#0072BB'>Sign in</font></string>
+    <string name="donot_have_an_account_signup" translatable="false">Don\'t have an account? <font fgcolor='#0072BB'><B>Signup</B></font></string>
+    <string name="forgot_your_password" translatable="false">Forgot your \npassword?</string>
+    <string name="do_not_worry_ll_send_the_account_details_to_your_email" translatable="false">Do not worry. We\'ll send the \naccount details to your email.</string>
+    <string name="send" translatable="false">Send</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="phone_number" translatable="false">Phone number</string>
+    <string name="confirm_password" translatable="false">Confirm password</string>
+    <string name="empty_first_name" translatable="false">Please enter your full name.</string>
+    <string name="empty_email" translatable="false">Please enter your email id.</string>
+    <string name="empty_phone_no" translatable="false">Please enter your phone number.</string>
+    <string name="empty_pass" translatable="false">Please enter your password.</string>
+    <string name="valid_pass" translatable="false">Password length should be at least 6 digits.</string>
+    <string name="empty_pass_confirm" translatable="false">Please enter your confirm password.</string>
+    <string name="password_do_not" translatable="false">Password does not match.</string>
+    <string name="by_proceeding" translatable="false">By proceeding, you also agree to Nil\'s\n<u>Terms of Service</u> &amp; <u>Privacy Policy.</u></string>
+    <string name="check_box" translatable="false">Please select app terms and privacy policy</string>
+
+    <string name="please_check_network_no_internet_connection_available" translatable="false">Please check your internet connection.</string>
+    <string name="phone_no_error" translatable="false">Phone no max length should be 10 digits.</string>
+    <string name="please_enter_valid_email_id" translatable="false">Please enter valid email id</string>
+</resources>
