@@ -76,6 +76,7 @@ public class MyConstants {
     public static final String HIPS = "neck";
     public static final String MY_FILE_PATH = "my_file_path";
     public static final String PROFILE_PIC = "profile_pic";
+    public static final String HEADER_TIME_ZONE = "Time-Zone";
     public static Dialog progressDialog;
 
     /**
