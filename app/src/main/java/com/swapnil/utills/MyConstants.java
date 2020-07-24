@@ -13,7 +13,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import com.swapnil.BuildConfig;
+
+import com.facebook.stetho.okhttp3.BuildConfig;
+//import com.swapnil.BuildConfig;
 import com.swapnil.R;
 
 public class MyConstants {

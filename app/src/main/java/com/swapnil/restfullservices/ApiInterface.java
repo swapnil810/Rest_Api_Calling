@@ -14,6 +14,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 public interface ApiInterface {
 
@@ -31,11 +32,6 @@ public interface ApiInterface {
     Call<ResponseBody> signup(@Header("x-api-key") String xApiKey,
             /*@Header("Authorization") String auth,*/
                               @Body HashMap<String, String> signup);
-
-    @POST("#")
-    Call<ResponseBody> forgetPassword(@Header("x-api-key") String xApiKey,
-            /*@Header("Authorization") String auth,*/
-                                      @Body HashMap<String, String> forgetPassword);
 
 
     @GET("logout/")
@@ -56,32 +52,9 @@ public interface ApiInterface {
                                             @Header("user_id") String getProductDetails,
                                             @Body HashMap<String, String> measurement);
 
-    @GET("User/getCategoryList")
-    Call<ResponseBody> getCategoryListApi(@Header("x-api-key") String xApiKey,
-                                          @Header("auth_token") String auth_token,
-                                          @Header("user_id") String getCategoryListApi);
-
-    @GET("User/getBrandColorSizeData")
-    Call<ResponseBody> getFilterSizeColorBrand(@Header("x-api-key") String xApiKey,
-                                               @Header("auth_token") String auth_token,
-                                               @Header("user_id") String getFilterSizeColorBrand);
-
-    @POST("User/getCategoryDetails/")
-    Call<ResponseBody> getCategoryDetailsApi(@Header("x-api-key") String xApiKey,
-                                             @Header("auth_token") String auth_token,
-                                             @Header("user_id") String getCategoryDetailsApi,
-                                             @Body HashMap<String, String> measurement);
-
-    @POST("User/getProductDataByFilter")
-    Call<ResponseBody> getProductDataByFilter(@Header("x-api-key") String xApiKey,
-                                              @Header("auth_token") String auth_token,
-                                              @Header("user_id") String getCategoryDetailsApi,
-                                              @Body HashMap<String, String> getProductDataByFilter);
 
 
-    @POST("measurements")
-    Call<ResponseBody> abtoApi(@Header("Authorization") String authorization,
-                               @Body HashMap<String, String> abtoApi);
+
 
     @PUT("User/setTakeUserPicture")
     Call<ResponseBody> measurement(@Header("x-api-key") String xApiKey,
@@ -98,12 +71,6 @@ public interface ApiInterface {
 //                                        @Header("Auth-Token") String auth_token,
                                         @Part MultipartBody.Part file);
 
-    @PUT("user/updateProfile/")
-    Call<ResponseBody> updateProfile(@Header("x-api-key") String xApiKey,
-                                     @Header("auth_token") String auth_token,
-                                     @Header("user_id") String user_id,
-                                     @Body HashMap<String, String> updateProfile);
-
 
     @DELETE("#")
     Call<ResponseBody> delete(@Header("x-api-key") String xApiKey,
@@ -111,5 +78,10 @@ public interface ApiInterface {
                               @Header("user_id") String userId,
                               @Header("auth_token") String authToken,
                               @Body HashMap<String, String> deleteU);
+
+    @GET("getSwapnilDetailsById/{swapnil_id}")
+    Call<ResponseBody> getSwapnilDetailsById(@Header("x-api-key") String xApiKey,
+                                             @Header("Authorization") String auth,
+                                             @Path("patient_id") String getPatientDetailsById);
 
 }
