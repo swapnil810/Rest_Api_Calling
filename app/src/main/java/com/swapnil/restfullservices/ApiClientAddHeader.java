@@ -2,11 +2,9 @@ package com.swapnil.restfullservices;
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.swapnil.utills.MyConstants;
-
 import java.io.IOException;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -14,13 +12,7 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * This class is used as .
- *
- * @author CanopusInfoSystems
- * @version 1.0
- * @since 24/7/20 :July : 2020 on 16 : 58.
- */
+
 class ApiClientAddHeader {
     public static final String base_url = "#";  //client's url
 
