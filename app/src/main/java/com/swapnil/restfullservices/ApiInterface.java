@@ -1,12 +1,17 @@
 package com.swapnil.restfullservices;
 
+import com.google.gson.JsonObject;
+
 import java.util.HashMap;
+import java.util.Map;
 
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.FieldMap;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
@@ -18,11 +23,17 @@ import retrofit2.http.Path;
 
 public interface ApiInterface {
 
+    //This header is used to normal data sending process
     @Headers({
             "Accept: application/json",
             "Content-Type: application/json",
     })
 
+    //This header is used for @FormUrlEncoded data sending process
+    /*@Headers({
+            "Accept: application/json",
+            "Content-Type  = application/x-www-from-urlencoded",
+ })*/
 
     @POST("login")
     Call<ResponseBody> login(@Header("x-api-key") String xApiKey,
@@ -33,12 +44,6 @@ public interface ApiInterface {
             /*@Header("Authorization") String auth,*/
                               @Body HashMap<String, String> signup);
 
-
-    @GET("logout/")
-    Call<ResponseBody> logOut(@Header("x-api-key") String xApiKey,
-//                              @Header("Authorization") String auth,
-                              @Header("auth_token") String auth_token,
-                              @Header("user_id") String user_id);
 
     @GET("getUserProfile/")
     Call<ResponseBody> getUserDetails(@Header("x-api-key") String xApiKey,
@@ -51,8 +56,6 @@ public interface ApiInterface {
                                             @Header("auth_token") String auth_token,
                                             @Header("user_id") String getProductDetails,
                                             @Body HashMap<String, String> measurement);
-
-
 
 
 
@@ -79,9 +82,21 @@ public interface ApiInterface {
                               @Header("auth_token") String authToken,
                               @Body HashMap<String, String> deleteU);
 
+
     @GET("getSwapnilDetailsById/{swapnil_id}")
     Call<ResponseBody> getSwapnilDetailsById(@Header("x-api-key") String xApiKey,
                                              @Header("Authorization") String auth,
                                              @Path("patient_id") String getPatientDetailsById);
+
+    @POST("addContact")
+    Call<ResponseBody> addContact(@Header("x-api-key") String xApiKey,
+                                  @Header("Authorization") String auth,
+                                  @Header("User-Rallie-Id") String user_id,
+                                  @Header("Auth-Token") String auth_token,
+                                  @Body JsonObject jsonStr);
+
+    @FormUrlEncoded
+    @POST("CheckEcode")
+    Call<ResponseBody> CheckEcodeApi(@FieldMap Map<String, String> fields);
 
 }

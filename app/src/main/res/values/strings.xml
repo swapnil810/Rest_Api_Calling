@@ -39,4 +39,5 @@
     <string name="phone_no_error" translatable="false">Phone no max length should be 10 digits.</string>
     <string name="please_enter_valid_email_id" translatable="false">Please enter valid email id</string>
     <string name="please_wait">Please_wait</string>
+    <string name="server_error">Server Error</string>
 </resources>
